@@ -1,9 +1,6 @@
 # 💧 Automated Self-Cleaning Water Filtration System
 ### PLC + HMI Software-in-the-Loop Simulation | RSLogix 500 · RSLogix Emulate 500 · EasyBuilder 5000
 
-<p align="center">
-  <img src="docs/assets/thumbnails/4.png" alt="Full System Visualization" width="90%"/>
-</p>
 
 <p align="center">
   <img src="https://img.shields.io/badge/PLC-RSLogix%20500-red?style=for-the-badge&logo=data:image/png;base64,iVBORw0KGgo=" />
@@ -13,23 +10,7 @@
   <img src="https://img.shields.io/badge/Simulation-Software--in--the--Loop-purple?style=for-the-badge" />
 </p>
 
----
 
-## 📋 Table of Contents
-
-- [Executive Summary](#-executive-summary)
-- [System Architecture](#-system-architecture)
-- [Software Stack & Tools](#-software-stack--tools)
-- [PLC Program Structure](#-plc-program-structure)
-- [HMI Design](#-hmi-design)
-- [Communications Integration](#-communications-integration)
-- [Simulation Setup Guide](#-simulation-setup-guide)
-- [Screenshot Gallery](#-screenshot-gallery)
-- [Demo Video](#-demo-video)
-- [Key Engineering Challenges](#-key-engineering-challenges)
-- [Project File Structure](#-project-file-structure)
-
----
 
 ## 🧠 Executive Summary
 
@@ -407,7 +388,7 @@ water-filtration-plc-hmi/
 
 ## 📄 License
 
-This project is shared for portfolio and educational purposes.
+This project was completed as a portfolio capstone for the Paul Lynn PLC Dojo course curriculum. It is shared here for educational and portfolio purposes
 
 ---
 
