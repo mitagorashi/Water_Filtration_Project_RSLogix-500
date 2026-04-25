@@ -2,7 +2,7 @@
 ### PLC + HMI Software-in-the-Loop Simulation | RSLogix 500 · RSLogix Emulate 500 · EasyBuilder 5000
 
 <p align="center">
-  <img src="docs/assets/gifs/system_overview_demo.gif"/>
+  <img src="docs/assets/gif/system_overview_demo.gif" alt="System Overview Demo" width="90%"/>
 </p>
 
 <p align="center">
@@ -13,7 +13,23 @@
   <img src="https://img.shields.io/badge/Simulation-Software--in--the--Loop-purple?style=for-the-badge" />
 </p>
 
+---
 
+## 📋 Table of Contents
+
+- [Executive Summary](#-executive-summary)
+- [System Architecture](#-system-architecture)
+- [Software Stack & Tools](#-software-stack--tools)
+- [PLC Program Structure](#-plc-program-structure)
+- [HMI Design](#-hmi-design)
+- [Communications Integration](#-communications-integration)
+- [Simulation Setup Guide](#-simulation-setup-guide)
+- [Screenshot Gallery](#-screenshot-gallery)
+- [Demo Video](#-demo-video)
+- [Key Engineering Challenges](#-key-engineering-challenges)
+- [Project File Structure](#-project-file-structure)
+
+---
 
 ## 🧠 Executive Summary
 
@@ -137,7 +153,7 @@ MicroLogix Program
 **LAD 9 — BACKWASH:** The most complex ladder in the program. Backwash can be locked out or enabled via HMI pushbuttons (`B3:6/0`, `B3:6/1`). A pending backwash is triggered when differential pressure exceeds the setpoint `F8:4` (5.0 PSI) for 5 seconds — or manually via `MAN_BW_PB` (`B3:5/14`). The pending state latches in `B3:4/5` and only converts to an active backwash (`B3:4/6` `BACKWASH_RUNNING`) once the tank level confirms it is above the high setpoint `F8:9` (80%) — ensuring there is sufficient water volume to complete the flush. The backwash runs for a fixed 60-second TON (`T4:6`), with remaining time computed for HMI display (`N7:7 = 60 − T4:6.ACC`). A critical fault during the cycle immediately drops `BACKWASH_RUNNING`. Cycle count is tracked in `N7:8` and can be reset from the HMI behind a 5-second hold (`T4:11`). A 500 ms pulse bit (`B3:6/7` `LOG_BW_DATA`) is generated on each backwash start for external data logging.
 
 <p align="center">
-  <img src="docs/assets/gifs/backwash_sequence.gif"/>
+  <img src="docs/assets/gif/backwash_sequence.gif" alt="Backwash Sequence Live" width="80%"/>
 </p>
 <p align="center"><em>Live: Backwash sequence triggering in RSLogix — rung highlighting as ΔP threshold is crossed</em></p>
 
@@ -190,7 +206,7 @@ Developed as an 8-screen interface in **EasyBuilder 5000**, engineered around op
 <p align="center"><em>Left: HOA Control Matrix | Right: Setpoint Configuration (role-protected)</em></p>
 
 <p align="center">
-  <img src="docs/assets/gifs/hmi_pid_animated.gif"/>
+  <img src="docs/assets/gif/hmi_pid_animated.gif" alt="HMI P&ID Live Animation" width="80%"/>
 </p>
 <p align="center"><em>Live: HMI P&ID screen — valve states and pipeline flow paths updating in real time</em></p>
 
@@ -378,7 +394,7 @@ water-filtration-plc-hmi/
         │   ├── hmi_08_trending.png
         │   ├── comms_architecture.png
         │   └── architecture_diagram.png
-        ├── gifs/
+        ├── gif/
         │   ├── backwash_sequence.gif
         │   └── hmi_pid_animated.gif
         └── thumbnails/
@@ -392,7 +408,7 @@ water-filtration-plc-hmi/
 
 ## 📄 License
 
-This project was completed as a portfolio capstone for the Paul Lynn PLC Dojo course curriculum. It is shared here for educational and portfolio purposes
+This project is shared for portfolio and educational purposes.
 
 ---
 
