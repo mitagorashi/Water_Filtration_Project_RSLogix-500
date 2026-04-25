@@ -332,12 +332,11 @@ Follow these steps in order to replicate the simulation environment.
 ## 🎬 Demo Video
 
 <p align="center">
-  <a href="YOUR_VIDEO_LINK_HERE">
-    <img src="docs/assets/thumbnails/4.png" alt="Watch Demo Video" width="60%"/>
+  <a href="https://youtu.be/SXKwlORQlGU">
   </a>
 </p>
 
-> **▶ [Click to Watch Full Demo on YouTube](YOUR_VIDEO_LINK_HERE)**
+> **▶ [Click to Watch Full Demo on YouTube](https://youtu.be/SXKwlORQlGU)**
 
 The demo walkthrough covers:
 1. RSLogix Emulate 500 running in RUN mode
