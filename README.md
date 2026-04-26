@@ -219,7 +219,7 @@ The same 8-screen interface was independently rebuilt in **Wonderware InTouch** 
 
 > Both HMI projects communicate with the same RSLogix Emulate 500 program via the same DF1 Full Duplex virtual serial bridge. No PLC logic was changed between implementations.
 
-**▶ [Full Wonderware Workflow Demo on YouTube](YOUR_WONDERWARE_VIDEO_LINK_HERE)**
+**▶ [Full Wonderware Workflow Demo on YouTube](https://youtu.be/E_H0Ll977O4)**
 
 ### Screen Gallery
 
