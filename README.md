@@ -11,9 +11,6 @@
 ![RS-232](https://img.shields.io/badge/Interface-RS--232-4B0082?style=for-the-badge)
 ![com0com](https://img.shields.io/badge/Routing-com0com_Virtual_COM-FF8C00?style=for-the-badge)
 
-![Industrial Automation](https://img.shields.io/badge/Domain-Industrial_Automation-333333?style=for-the-badge)
-![PLC Programming](https://img.shields.io/badge/Skill-PLC_Programming-0055A4?style=for-the-badge)
-![SCADA Design](https://img.shields.io/badge/Skill-SCADA_%26_HMI_Design-00A86B?style=for-the-badge)
 
 
 <p align="center">
