@@ -1,5 +1,10 @@
 # 💧 Automated Self-Cleaning Water Filtration System
 ### PLC + HMI Software-in-the-Loop Simulation | RSLogix 500 · RSLogix Emulate 500 · EasyBuilder 5000
+
+<p align="center">
+  <img src="docs/assets/gif/system_overview_demo.gif" alt="System Overview Demo" width="90%"/>
+</p>
+
 <p align="center">
   <img src="https://img.shields.io/badge/PLC-RSLogix%20500-red?style=for-the-badge&logo=data:image/png;base64,iVBORw0KGgo=" />
   <img src="https://img.shields.io/badge/HMI-EasyBuilder%205000-blue?style=for-the-badge" />
@@ -7,12 +12,6 @@
   <img src="https://img.shields.io/badge/Logic-Ladder%20(IEC%2061131--3)-orange?style=for-the-badge" />
   <img src="https://img.shields.io/badge/Simulation-Software--in--the--Loop-purple?style=for-the-badge" />
 </p>
-
-<p align="center">
-  <img src="docs/assets/gif/system_overview_demo.gif" alt="System Overview Demo" width="90%"/>
-</p>
-
-
 
 ---
 
@@ -94,7 +93,8 @@ The physical process draws raw water through a media filter driven by a single p
 | RSLogix Micro Starter Lite | — | Ladder logic development environment |
 | RSLogix Emulate 500 | — | Virtual SLC 500 / MicroLogix soft PLC |
 | RSLinx Classic Lite | — | RSLogix ↔ Emulator programming link |
-| EasyBuilder 5000 | — | HMI runtime and screen design |
+| EasyBuilder 5000 | — | HMI runtime and screen design (primary) |
+| Wonderware InTouch (AVEVA) | — | HMI runtime and screen design (secondary) |
 | com0com | — | Virtual null-modem serial port emulator |
 
 > **No licensed OPC server was used.** The integration was achieved via native DF1 Full Duplex serial communication between the Emulator and HMI — a deliberate constraint that required engineering a custom virtual serial bridge.
@@ -210,6 +210,51 @@ Developed as an 8-screen interface in **EasyBuilder 5000**, engineered around op
   <img src="docs/assets/gif/hmi_pid_animated.gif" alt="HMI P&ID Live Animation" width="80%"/>
 </p>
 <p align="center"><em>Live: HMI P&ID screen — valve states and pipeline flow paths updating in real time</em></p>
+
+---
+
+## 🖥 HMI Design — Wonderware (AVEVA) InTouch
+
+The same 8-screen interface was independently rebuilt in **Wonderware InTouch** (AVEVA), demonstrating that the control system design is platform-agnostic and not tied to any single HMI vendor. All screens, tag bindings, alarm workflows, HOA interactions, and setpoint configurations are identical in behaviour — only the development environment differs.
+
+> Both HMI projects communicate with the same RSLogix Emulate 500 program via the same DF1 Full Duplex virtual serial bridge. No PLC logic was changed between implementations.
+
+**▶ [Full Wonderware Workflow Demo on YouTube](YOUR_WONDERWARE_VIDEO_LINK_HERE)**
+
+### Screen Gallery
+
+<p align="center">
+  <img src="docs/assets/screenshots/ww_01_dashboard.png" alt="Wonderware Dashboard" width="45%"/>
+  &nbsp;
+  <img src="docs/assets/screenshots/ww_06_pid.png" alt="Wonderware P&ID" width="45%"/>
+</p>
+<p align="center"><em>Left: Main Dashboard | Right: P&ID Monitoring Screen</em></p>
+
+<p align="center">
+  <img src="docs/assets/screenshots/ww_07_alarms.png" alt="Wonderware Alarms" width="45%"/>
+  &nbsp;
+  <img src="docs/assets/screenshots/ww_08_trending.png" alt="Wonderware Trending" width="45%"/>
+</p>
+<p align="center"><em>Left: Alarm Management | Right: Real-Time Trending</em></p>
+
+<p align="center">
+  <img src="docs/assets/screenshots/ww_02_hoa.png" alt="Wonderware HOA" width="45%"/>
+  &nbsp;
+  <img src="docs/assets/screenshots/ww_05_config.png" alt="Wonderware Config" width="45%"/>
+</p>
+<p align="center"><em>Left: HOA Control Matrix | Right: Setpoint Configuration</em></p>
+
+<p align="center">
+  <img src="docs/assets/screenshots/ww_03_security.png" alt="Wonderware Security" width="45%"/>
+  &nbsp;
+  <img src="docs/assets/screenshots/ww_04_maintenance.png" alt="Wonderware Maintenance" width="45%"/>
+</p>
+<p align="center"><em>Left: Access Control | Right: Runtime & Maintenance</em></p>
+
+<p align="center">
+  <img src="docs/assets/gif/ww_workflow.gif" alt="Wonderware Full Workflow" width="80%"/>
+</p>
+<p align="center"><em>Live: Full system workflow in Wonderware InTouch</em></p>
 
 ---
 
@@ -332,11 +377,12 @@ Follow these steps in order to replicate the simulation environment.
 ## 🎬 Demo Video
 
 <p align="center">
-  <a href="https://youtu.be/SXKwlORQlGU">
+  <a href="YOUR_VIDEO_LINK_HERE">
+    <img src="docs/assets/thumbnails/4.png" alt="Watch Demo Video" width="60%"/>
   </a>
 </p>
 
-> **▶ [Click to Watch Full Demo on YouTube](https://youtu.be/SXKwlORQlGU)**
+> **▶ [Click to Watch Full Demo on YouTube](YOUR_VIDEO_LINK_HERE)**
 
 The demo walkthrough covers:
 1. RSLogix Emulate 500 running in RUN mode
@@ -376,7 +422,10 @@ water-filtration-plc-hmi/
 │   └── water_filtration_system.RSS           # RSLogix 500 project file
 │
 ├── hmi/
-│   └── water_filtration_hmi.exob             # EasyBuilder 5000 project file
+│   ├── easybuilder/
+│   │   └── water_filtration_hmi.exob         # EasyBuilder 5000 project file
+│   └── wonderware/
+│       └── water_filtration_hmi.aap          # Wonderware InTouch project file
 │
 └── docs/
     ├── plclogic.pdf                           # Full RSLogix Micro project report (all rungs)
@@ -384,19 +433,27 @@ water-filtration-plc-hmi/
     └── assets/
         ├── screenshots/
         │   ├── plc_program_overview.png       # RSLogix program file list
-        │   ├── hmi_01_dashboard.png
-        │   ├── hmi_02_hoa.png
-        │   ├── hmi_03_security.png
-        │   ├── hmi_04_maintenance.png
-        │   ├── hmi_05_config.png
-        │   ├── hmi_06_pid.png
-        │   ├── hmi_07_alarms.png
-        │   ├── hmi_08_trending.png
-        │   ├── comms_architecture.png
-        │   └── architecture_diagram.png
+        │   ├── hmi_01_dashboard.png           # EasyBuilder — Dashboard
+        │   ├── hmi_02_hoa.png                 # EasyBuilder — HOA Matrix
+        │   ├── hmi_03_security.png            # EasyBuilder — Access Control
+        │   ├── hmi_04_maintenance.png         # EasyBuilder — Maintenance
+        │   ├── hmi_05_config.png              # EasyBuilder — Setpoints
+        │   ├── hmi_06_pid.png                 # EasyBuilder — P&ID
+        │   ├── hmi_07_alarms.png              # EasyBuilder — Alarms
+        │   ├── hmi_08_trending.png            # EasyBuilder — Trending
+        │   ├── ww_01_dashboard.png            # Wonderware — Dashboard
+        │   ├── ww_02_hoa.png                  # Wonderware — HOA Matrix
+        │   ├── ww_03_security.png             # Wonderware — Access Control
+        │   ├── ww_04_maintenance.png          # Wonderware — Maintenance
+        │   ├── ww_05_config.png               # Wonderware — Setpoints
+        │   ├── ww_06_pid.png                  # Wonderware — P&ID
+        │   ├── ww_07_alarms.png               # Wonderware — Alarms
+        │   ├── ww_08_trending.png             # Wonderware — Trending
+        │   └── comms_architecture.png
         ├── gif/
         │   ├── backwash_sequence.gif
-        │   └── hmi_pid_animated.gif
+        │   ├── hmi_pid_animated.gif
+        │   └── ww_workflow.gif                # Wonderware full workflow
         └── thumbnails/
             ├── 1.png                          # Fill mode diagram
             ├── 2.png                          # Drain mode diagram
@@ -407,7 +464,8 @@ water-filtration-plc-hmi/
 ---
 
 ## 📄 License
-This project was completed as a portfolio capstone for the Paul Lynn PLC Dojo course curriculum. It is shared here for educational and portfolio purposes
+
+This project is shared for portfolio and educational purposes.
 
 ---
 
