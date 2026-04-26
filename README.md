@@ -1,17 +1,25 @@
 # 💧 Automated Self-Cleaning Water Filtration System
 ### PLC + HMI Software-in-the-Loop Simulation | RSLogix 500 · RSLogix Emulate 500 · EasyBuilder 5000
 
+![Allen-Bradley](https://img.shields.io/badge/Allen--Bradley-RSLogix_500-E31937?style=for-the-badge)
+![Wonderware](https://img.shields.io/badge/SCADA-Wonderware_InTouch-00629A?style=for-the-badge)
+![EasyBuilder](https://img.shields.io/badge/HMI-EasyBuilder_5000-008080?style=for-the-badge)
+![RSLinx](https://img.shields.io/badge/Server-RSLinx_Classic-CC0000?style=for-the-badge)
+
+![DF1 Protocol](https://img.shields.io/badge/Protocol-DF1_Full_Duplex-107C10?style=for-the-badge)
+![OPC/DDE](https://img.shields.io/badge/Protocol-OPC%2FDDE-8A2BE2?style=for-the-badge)
+![RS-232](https://img.shields.io/badge/Interface-RS--232-4B0082?style=for-the-badge)
+![com0com](https://img.shields.io/badge/Routing-com0com_Virtual_COM-FF8C00?style=for-the-badge)
+
+![Industrial Automation](https://img.shields.io/badge/Domain-Industrial_Automation-333333?style=for-the-badge)
+![PLC Programming](https://img.shields.io/badge/Skill-PLC_Programming-0055A4?style=for-the-badge)
+![SCADA Design](https://img.shields.io/badge/Skill-SCADA_%26_HMI_Design-00A86B?style=for-the-badge)
+
+
 <p align="center">
   <img src="docs/assets/gif/system_overview_demo.gif" alt="System Overview Demo" width="90%"/>
 </p>
 
-<p align="center">
-  <img src="https://img.shields.io/badge/PLC-RSLogix%20500-red?style=for-the-badge&logo=data:image/png;base64,iVBORw0KGgo=" />
-  <img src="https://img.shields.io/badge/HMI-EasyBuilder%205000-blue?style=for-the-badge" />
-  <img src="https://img.shields.io/badge/Protocol-DF1%20Full%20Duplex-green?style=for-the-badge" />
-  <img src="https://img.shields.io/badge/Logic-Ladder%20(IEC%2061131--3)-orange?style=for-the-badge" />
-  <img src="https://img.shields.io/badge/Simulation-Software--in--the--Loop-purple?style=for-the-badge" />
-</p>
 
 ---
 
