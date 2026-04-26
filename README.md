@@ -465,7 +465,7 @@ water-filtration-plc-hmi/
 
 ## 📄 License
 
-This project is shared for portfolio and educational purposes.
+This project was completed as a portfolio capstone for the Paul Lynn PLC Dojo course curriculum. It is shared here for educational and portfolio purposes.
 
 ---
 
